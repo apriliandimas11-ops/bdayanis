@@ -8,7 +8,7 @@ const CONFIG = {
     pin: "270922",
     birthDate: "2002-10-16",
     relationshipDate: "2022-09-27",
-    backgroundImage: "assets/images/Background.jpeg",
+    backgroundImage: "assets/images/background.jpeg",
     music: "assets/music/Happy Birthday.mp3",
     heroTitle: "Happy Birthday, Sayang ❤️"
 };
