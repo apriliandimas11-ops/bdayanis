@@ -9,7 +9,7 @@ const CONFIG = {
     birthDate: "2002-10-16",
     relationshipDate: "2022-09-27",
     backgroundImage: "assets/images/background.jpg",
-    music: "assets/music/romantic.mp3",
+    music: "assets/music/Happy Birthday.mp3",
     heroTitle: "Happy Birthday, Sayang ❤️"
 };
 
@@ -473,6 +473,12 @@ function populateContent() {
     // Final section
     document.getElementById("final-name").textContent = CONFIG.partnerName;
     document.getElementById("final-myname").textContent = CONFIG.myName;
+
+   //background
+   document.querySelector(".lock-bg").style.backgroundImage = "url('" + CONFIG.backgroundImage + "')";
+   document.querySelector(".hero-bg").style.backgroundImage = "url('" + CONFIG.backgroundImage + "')";
+   document.querySelector(".final-bg").style.backgroundImage = "url('" + CONFIG.backgroundImage + "')";
+
 
     // Render gallery
     renderGallery();
