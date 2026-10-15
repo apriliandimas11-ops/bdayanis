@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Bday, Annisa Ahmad ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-heart">❤️</div>
+            <p class="loading-text">Menyiapkan sedikit kejutan untukmu...</p>
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PIN / LOCK SCREEN ==================== -->
+    <div id="lock-screen">
+        <div class="lock-bg"></div>
+        <div class="lock-overlay"></div>
+        <div class="hearts-container" id="lock-hearts"></div>
+        <div class="sparkle-container" id="lock-sparkles"></div>
+        <div class="lock-content">
+            <div class="lock-icon">🔒</div>
+            <h1 class="lock-title">Untuk Kamu, Orang yang Paling Aku Sayang ❤️</h1>
+            <p class="lock-subtitle">Sebelum masuk, masukkan tanggal yang hanya kita berdua yang tahu.</p>
+            <div class="pin-container" id="pin-container">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="0" autocomplete="off">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="1" autocomplete="off">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="2" autocomplete="off">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="3" autocomplete="off">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="4" autocomplete="off">
+                <input type="text" class="pin-input" maxlength="1" inputmode="numeric" pattern="[0-9]" data-index="5" autocomplete="off">
+            </div>
+            <p class="pin-error" id="pin-error">PIN yang kamu masukkan salah ❤️</p>
+            <button class="btn-enter" id="btn-enter">Masuk ❤️</button>
+        </div>
+    </div>
+
+    <!-- ==================== GIFT SCREEN ==================== -->
+    <div id="gift-screen" class="hidden">
+        <h1 class="gift-text">Ada hadiah kecil untukmu ❤️</h1>
+        <div class="gift-container" id="gift-container">
+            <div class="gift-box"></div>
+            <div class="gift-lid"></div>
+            <div class="gift-bow">
+                <div class="gift-bow-left"></div>
+                <div class="gift-bow-right"></div>
+                <div class="gift-center"></div>
+            </div>
+            <div class="gift-glow"></div>
+        </div>
+        <p class="gift-instruction">Klik kadonya untuk membuka</p>
+    </div>
+
+    <!-- ==================== MAIN WEBSITE ==================== -->
+    <div id="main-website" class="hidden">
+
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">❤️</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#quotes" class="nav-link">Kata-Kata</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#letter" class="nav-link">Letter</a></li>
+                    <li><a href="#wishes" class="nav-link">Wish</a></li>
+                    <li><a href="#surprise" class="nav-link">Surprise</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hearts-container" id="hero-hearts"></div>
+            <div class="sparkle-container" id="hero-sparkles"></div>
+            <div class="hero-content">
+                <h1 class="hero-title fade-in" id="hero-title"></h1>
+                <h2 class="hero-name fade-in" id="hero-name"></h2>
+                <p class="hero-subtitle fade-in" id="hero-subtitle">
+                    Hari ini adalah hari spesialmu,<br>
+                    dan aku ingin membuatnya sedikit lebih indah<br>
+                    dengan menyimpan beberapa kata kecil<br>
+                    yang mungkin bisa membuatmu tersenyum.
+                </p>
+                <a href="#age" class="btn-primary fade-in">Buka❤️</a>
+            </div>
+        </section>
+
+        <!-- AGE / BIRTHDAY SECTION -->
+        <section id="age" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">Today Is Your Special Day</h2>
+                <div class="age-display">
+                    <p class="age-text">Selamat ulang tahun yang ke-</p>
+                    <div class="age-number" id="age-number">0</div>
+                    <span class="age-heart">❤️</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOVE COUNTER SECTION -->
+        <section id="counter" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">Sudah Berapa Lama Kita Bersama?</h2>
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <div class="counter-number" id="counter-days">0</div>
+                        <div class="counter-label">Hari</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="counter-hours">0</div>
+                        <div class="counter-label">Jam</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="counter-minutes">0</div>
+                        <div class="counter-label">Menit</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="counter-seconds">0</div>
+                        <div class="counter-label">Detik</div>
+                    </div>
+                </div>
+                <p class="counter-message script-font">Dan semoga waktu yang kita punya<br>masih akan terus bertambah.</p>
+            </div>
+        </section>
+
+        <!-- KATA-KATA / QUOTES SECTION -->
+        <section id="quotes" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">Kata-Kata Untukmu ❤️</h2>
+                <div class="quote-card-wrapper">
+                    <div class="quote-card" id="quote-card">
+                        <div class="quote-icon">❝</div>
+                        <p class="quote-text" id="quote-text"></p>
+                        <p class="quote-author" id="quote-author"></p>
+                    </div>
+                    <div class="quote-nav">
+                        <button class="quote-btn" id="quote-prev">← Sebelumnya</button>
+                        <span class="quote-counter" id="quote-counter">01 / 20</span>
+                        <button class="quote-btn" id="quote-next">Berikutnya ❤️</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RANDOM LOVE MESSAGE -->
+        <section id="random-message" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">Kalau Aku Boleh Bilang Satu Hal...</h2>
+                <div class="random-card">
+                    <p class="random-text" id="random-text">Klik tombol di bawah untuk membaca pesan dariku ❤️</p>
+                </div>
+                <button class="btn-primary" id="btn-random">Kasih Aku Satu Pesan ❤️</button>
+            </div>
+        </section>
+
+        <!-- KUE ULANG TAHUN -->
+        <section id="cake-section" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">Make A Wish 🎂</h2>
+                <div class="cake-container" id="cake-container">
+                    <div class="cake">
+                        <div class="cake-layer cake-layer-top">
+                            <div class="frosting">
+                                <div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div>
+                            </div>
+                            <div class="candles-container" id="candles-container">
+                                <!-- Candles will be generated by JS -->
+                            </div>
+                        </div>
+                        <div class="cake-layer cake-layer-middle"></div>
+                        <div class="cake-layer"></div>
+                    </div>
+                </div>
+                <p class="cake-instruction">
+            Tiup lilinnya dan buat 3 harapan terbaikmu ❤️
+        </p>
+                <p class="cake-surprise-message" id="cake-surprise-message"></p>
+            </div>
+        </section>
+
+        <!-- BUKET BUNGA -->
+        <section id="bouquet-section" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">Sedikit Bunga Untukmu 💐</h2>
+                <div class="bouquet-container" id="bouquet-container">
+                    <div class="digital-bouquet">
+                        <div class="db-wrapper-back"></div>
+                        <div class="db-stems"></div>
+                        <div class="db-flowers">
+                            <div class="db-flower" style="--d: 0.1s; --x: 0px; --y: -60px; --s: 1.4; --r: -5deg;">🌷</div>
+                            <div class="db-flower" style="--d: 0.3s; --x: -40px; --y: -25px; --s: 1.2; --r: -25deg;">🌸</div>
+                            <div class="db-flower" style="--d: 0.5s; --x: 40px; --y: -25px; --s: 1.2; --r: 25deg;">🌷</div>
+                            <div class="db-flower" style="--d: 0.7s; --x: -25px; --y: 20px; --s: 1.3; --r: -15deg;">🌺</div>
+                            <div class="db-flower" style="--d: 0.9s; --x: 25px; --y: 20px; --s: 1.3; --r: 15deg;">🌸</div>
+                            <div class="db-flower" style="--d: 1.1s; --x: 0px; --y: 5px; --s: 1.6; --r: 0deg;">🌷</div>
+                        </div>
+                        <div class="db-wrapper-front"></div>
+                        <div class="db-ribbon"></div>
+                    </div>
+                </div>
+                <button class="btn-primary" id="btn-bouquet">Berikan Bunganya 💐</button>
+                <p class="bouquet-message" id="bouquet-message">Untuk seseorang yang membuat hidupku terasa lebih indah. ❤️</p>
+            </div>
+        </section>
+
+        <!-- MUSIC PLAYER SECTION -->
+        <section id="music-section" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">🎵 Music Player</h2>
+                <div class="sp-player" id="sp-player">
+                    <div class="sp-now-playing">
+                        <div class="sp-track-title" id="sp-track-title">Happy Birthday</div>
+                        <div class="sp-track-artist" id="sp-track-artist">Lagu Ulang Tahunmu</div>
+                    </div>
+                    <div class="sp-progress-area">
+                        <div class="sp-progress-bar" id="sp-progress-bar">
+                            <div class="sp-progress" id="sp-progress"></div>
+                            <div class="sp-progress-thumb" id="sp-progress-thumb"></div>
+                        </div>
+                        <div class="sp-time">
+                            <span id="sp-current-time">00:00</span>
+                            <span id="sp-duration">00:00</span>
+                        </div>
+                    </div>
+                    <div class="sp-controls">
+                        <button class="sp-btn sp-prev" id="sp-prev" aria-label="Previous">⏮</button>
+                        <button class="sp-btn sp-play" id="sp-play" aria-label="Play">▶</button>
+                        <button class="sp-btn sp-next" id="sp-next" aria-label="Next">⏭</button>
+                    </div>
+                    <div class="sp-playlist" id="sp-playlist">
+                        <div class="sp-playlist-item active" data-index="0">
+                            <span class="sp-playlist-icon">♫</span>
+                            <div class="sp-playlist-info">
+                                <span class="sp-playlist-name">Happy Birthday</span>
+                                <span class="sp-playlist-artist">Lagu Ulang Tahunmu</span>
+                            </div>
+                        </div>
+                        <div class="sp-playlist-item" data-index="1">
+                            <span class="sp-playlist-icon">♫</span>
+                            <div class="sp-playlist-info">
+                                <span class="sp-playlist-name">Kita Lewati Berdua</span>
+                                <span class="sp-playlist-artist">Lagu Cinta</span>
+                            </div>
+                        </div>
+                        <div class="sp-playlist-item" data-index="2">
+                            <span class="sp-playlist-icon">♫</span>
+                            <div class="sp-playlist-info">
+                                <span class="sp-playlist-name">Perfect</span>
+                                <span class="sp-playlist-artist">Ed Sheeran</span>
+                            </div>
+                        </div>
+                    </div>
+                    <audio id="sp-audio" preload="auto"></audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section id="gallery" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">Galeri Kenangan Kita ❤️</h2>
+                <div class="gallery-opener" id="gallery-opener">
+                    <div class="gallery-opener-icon">✨</div>
+                    <button class="gallery-opener-btn" id="gallery-opener-btn">Buka Galeri</button>
+                    <p class="gallery-opener-hint">↓ Klik di sini ↓</p>
+                </div>
+                <p class="gallery-subtitle" id="gallery-subtitle">Ketuk foto untuk membuka kenangan ❤️</p>
+                <div class="gallery-grid" id="gallery-grid"></div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox hidden">
+            <div class="lightbox-overlay"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightbox-close">✕</button>
+                <button class="lightbox-nav lightbox-prev" id="lightbox-prev">❮</button>
+                <button class="lightbox-nav lightbox-next" id="lightbox-next">❯</button>
+                <img id="lightbox-img" src="" alt="Gallery Photo">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+                <div class="lightbox-hearts" id="lightbox-hearts"></div>
+            </div>
+        </div>
+
+        <!-- 10 ALASAN -->
+        <section id="reasons" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">10 Alasan Kenapa Aku tetap bertahan❤️</h2>
+                <div class="reason-card-wrapper">
+                    <div class="reason-card" id="reason-card">
+                        <div class="reason-number" id="reason-number">01</div>
+                        <p class="reason-text" id="reason-text"></p>
+                    </div>
+                    <div class="reason-nav">
+                        <span class="reason-counter" id="reason-counter">01 / 10</span>
+                        <button class="btn-primary" id="btn-reason">Alasan Berikutnya ❤️</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURAT CINTA / LETTER -->
+        <section id="letter" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">Untuk Kamu ❤️</h2>
+                <div class="letter-wrapper">
+                    <div class="envelope" id="envelope">
+                        <div class="envelope-icon">💌</div>
+                        <p class="envelope-text">Klik untuk membuka surat</p>
+                    </div>
+                    <div class="letter-paper hidden" id="letter-paper">
+                        <div class="letter-content" id="letter-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOA DAN HARAPAN / WISHES -->
+        <section id="wishes" class="section">
+            <div class="section-container">
+                <h2 class="section-title script-font">Doa Terbaik Untukmu</h2>
+                <div class="wishes-grid" id="wishes-grid"></div>
+            </div>
+        </section>
+
+        <!-- SURPRISE -->
+        <section id="surprise" class="section section-dark">
+            <div class="section-container">
+                <h2 class="section-title script-font">Masih Ada Satu Hal Lagi...</h2>
+                <button class="btn-surprise" id="btn-surprise">Jangan Klik Kalau Belum Siap ❤️</button>
+            </div>
+        </section>
+
+        <!-- SURPRISE OVERLAY -->
+        <div id="surprise-overlay" class="surprise-overlay hidden">
+            <div class="surprise-content" id="surprise-content"></div>
+        </div>
+
+        <!-- FINAL SECTION -->
+        <section id="final" class="section-final">
+            <div class="final-bg"></div>
+            <div class="final-overlay"></div>
+            <div class="hearts-container" id="final-hearts"></div>
+            <div class="sparkle-container" id="final-sparkles"></div>
+            <div class="final-content">
+                <h1 class="final-title script-font">Happy Birthday ❤️</h1>
+                <h2 class="final-name" id="final-name"></h2>
+                <p class="final-message">Terima kasih sudah menjadi<br>bagian terindah dari hidupku.</p>
+                <p class="final-sign">With Love,</p>
+                <p class="final-myname" id="final-myname"></p>
+                <button class="btn-primary" id="btn-restart">Ulangi dari Awal ❤️</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- MUSIC PLAYER -->
+    <div id="music-player" class="music-player hidden">
+        <button class="music-btn" id="music-btn" title="Putar Musik">
+            <span class="music-icon" id="music-icon">🎵</span>
+        </button>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" class="back-to-top hidden" title="Kembali ke atas">↑</button>
+
+    <!-- AUDIO -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music/romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
